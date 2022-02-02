@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:student_app/screens/home_screen.dart';
 import 'package:student_app/screens/notice_screen.dart';
 import 'package:student_app/screens/profile_screen.dart';
+import 'package:student_app/screens/result_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,8 +14,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final tabs = [
-    const Center(child: Text('Home')),
-    const Center(child: Text('Results')),
+    const HomeScreen(),
+    const ResultsScreen(),
     const NoticeScreen(),
     const ProfileScreen(),
   ];

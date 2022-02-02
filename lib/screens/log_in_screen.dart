@@ -121,13 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SimpleButton(
                 text: 'Log In',
-                click: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const Home(),
-                    ),
-                  );
-                },
+                click: logInForm,
               ),
             ],
           ),
