@@ -4,8 +4,9 @@ import 'dart:convert';
 
 import 'package:student_app/models/student.dart';
 
+String? token;
+
 class Auth with ChangeNotifier {
-  String? token;
   int? statusCode;
   Student? student;
   Future<void> signUp(Student student) async {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:student_app/providers/auth.dart';
 import 'package:student_app/providers/notifications.dart';
+import 'package:student_app/providers/students.dart';
 import 'package:student_app/screens/home.dart';
 import 'package:student_app/screens/log_in_screen.dart';
 import 'package:student_app/screens/sign_up_screen.dart';
@@ -21,12 +22,9 @@ class StudentApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => Auth(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => Notifications(),
-        ),
+        ChangeNotifierProvider(create: (context) => Auth()),
+        ChangeNotifierProvider(create: (context) => Notifications()),
+        ChangeNotifierProvider(create: (context) => Students()),
       ],
       child: MaterialApp(
         theme: ThemeData(

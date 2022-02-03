@@ -12,6 +12,7 @@ class Student {
   final String address;
   final String course;
   final String password;
+  final bool? accStatus;
 
   Student({
     required this.firstName,
@@ -27,5 +28,6 @@ class Student {
     required this.password,
     required this.phoneNumber,
     required this.salutation,
+    this.accStatus,
   });
 }
