@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:student_app/providers/auth.dart';
 import 'package:student_app/providers/notifications.dart';
+import 'package:student_app/providers/results.dart';
 import 'package:student_app/providers/students.dart';
 import 'package:student_app/screens/home.dart';
 import 'package:student_app/screens/log_in_screen.dart';
@@ -25,6 +26,7 @@ class StudentApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => Auth()),
         ChangeNotifierProvider(create: (context) => Notifications()),
         ChangeNotifierProvider(create: (context) => Students()),
+        ChangeNotifierProvider(create: (context) => Results()),
       ],
       child: MaterialApp(
         theme: ThemeData(

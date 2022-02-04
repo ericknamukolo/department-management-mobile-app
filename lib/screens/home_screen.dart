@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:student_app/constants.dart';
 import 'package:student_app/providers/auth.dart';
+import 'package:student_app/screens/attendance_screen.dart';
 import 'package:student_app/screens/classmate_screen.dart';
+import 'package:student_app/screens/courses_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -47,12 +49,8 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const HomeCard(
-                  title: 'Sylabus',
-                  icon: Icons.book,
-                ),
                 HomeCard(
                   title: 'Class Mates',
                   icon: Icons.supervised_user_circle,
@@ -65,14 +63,22 @@ class HomeScreen extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 HomeCard(
-                  title: 'Results',
+                  title: 'Courses',
                   icon: Icons.menu_book,
+                  click: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const CoursesScreen()));
+                  },
                 ),
                 HomeCard(
                   title: 'Attendance',
                   icon: Icons.school,
+                  click: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const AttendanceScreen()));
+                  },
                 ),
               ],
             ),

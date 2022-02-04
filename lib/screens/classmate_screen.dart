@@ -28,7 +28,6 @@ class _ClassMateScreenState extends State<ClassMateScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(_isLoading);
     final studentData = Provider.of<Students>(context)
         .students
         .where((stud) => stud.accStatus == true)
